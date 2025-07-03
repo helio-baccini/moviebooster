@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Booster</title>
+    <link rel="stylesheet" href="static/estilo.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <body>
+    <header class="header_container">
+        <nav class="header_nav">
+            <ul class="nav_list">
+                <li><a href="#">Início</a></li>
+                <li><a href="#destaque">Destaques</a></li>
+                <li><a href="#reserva">Reservas</a></li>
+                <li><a href="#locadora">Locadora</a></li>
+                <li><a href="#contatos">Contato</a></li>
+                <!-- SWAGGER / API -->
+                <li><a href="http://127.0.0.1:5000/swagger" target="_blank">API</a></li>
+            </ul>
+            </nav>
+    </header><!-- header_container -->
+    
+    <main class="container">            
+        <section class="container_header">
+            <h1>Alocação de Filmes</h1>
+            <p>Bem-vindo ao sistema de alocação de filmes! Aqui você pode adicionar pessoas, filmes e tarefas relacionadas.</p>
+        </section> <!--container-header -->
+
+        <section class="carts_section"  id="destaque">
+            <!-- carts filme 1 -->
+            <article class="cart_card">
+                <img src="static/imagens/filme1.avif" alt="Filme 1">
+                <div class="cart_card_content">
+                    <p>Nesta nova aventura, Paddington embarca em uma jornada pela floresta paraajudar um amigo em apuros. Com seu jeito gentil, educado e atrapalhado, oursinho explora a natureza, faz novas amizades com animais e enfrenta desafioscom coragem e humor. Uma história cheia de lições sobre empatia, trabalho emequipe e a importância de proteger o meio ambiente.</p>
+                </div>
+            </article>
+            
+            <!-- carts filme 2 -->
+            <article class="cart_card">
+                <img src="static/imagens/filme2.jpg" alt="Filme 2">
+                <div class="cart_card_content">
+                    <p>Em um mundo feito inteiramente de blocos, uma jovem e corajosa heroína precisa unir forças com aliados improváveis para salvar sua vila de uma misteriosa ameaça que está destruindo tudo em seu caminho. Embarcando em uma jornada épica por florestas, cavernas e dimensões perigosas, ela aprende sobre amizade, coragem e o verdadeiro poder da criação. Inspirado no universo do jogo, o filme combina aventura, humor e pixel art em uma história para todas as idades.</p>
+                </div>
+            </article>
+
+            <!-- carts filme 3 -->
+            <article class="cart_card">
+                <img src="static/imagens/filme3.jpeg" alt="Filme 3">
+                <div class="cart_card_content">
+                    <p>Quando as linhas do multiverso começam a se romper, Deadpool se vê arrastado para uma missão inesperada ao lado do relutante Wolverine. Juntos, eles precisam enfrentar ameaças que colocam em risco diferentes realidades — tudo isso enquanto trocam provocações, piadas ácidas e golpes brutais. Com muito humor irreverente, ação explosiva e a química caótica entre os dois heróis, o filme marca a estreia de Deadpool no Universo Cinematográfico da Marvel em grande estilo.</p>
+                </div>
+            </article>    
+
+            <!-- carts filme 4 -->
+            <article class="cart_card">
+                <img src="static/imagens/filme4.jpg" alt="Filme 4">
+                <div class="cart_card_content">
+                    <p>Após os eventos que abalaram Gotham, Arthur Fleck mergulha ainda mais profundamente em sua transformação no enigmático Coringa. Em uma sociedade cada vez mais fragmentada, ele se vê como o protagonista de um espetáculo sombrio onde a linha entre realidade e delírio se apaga. "O mundo é um palco" revela os bastidores da mente perturbada de Arthur, explorando temas como identidade, rejeição e o poder destrutivo do abandono social.</p>
+                </div>
+            </article> 
+        </section> <!-- carts_section -->
+        
+        <!-- FORMULARIO -->
+        <section class="tabela_section border_newsletter" id="reserva">        
+            <input type="text" id="busca-filme" class="input-unificado" placeholder="Buscar por título..."> 
+            
+            <h1>Reserva de Filmes</h1>
+            <form id="form-registro">
+                <input type="text" name="nome" placeholder="Nome" required>
+                <input type="text" name="titulo" placeholder="Filme" required>
+                <select name="data_lancamento" required></select>
+                <select name="description" required>
+                    <option value="Alugar">Alugar</option>
+                    <option value="Reservar">Reservar</option>
+                </select>
+                <button type="submit">Salvar</button>
+            </form>
+        
+            <h2>Lista</h2>
+            <div class="tabela-responsiva">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Filme</th>
+                            <th>Ano Lançamento</th>
+                            <th>Condição</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-dados"></tbody>
+                </table>
+            </div><!-- tabela-responsiva -->
+        </section><!-- tabela_section -->
+        
+        <!-- NOTICIA / SOBRE A LOCADORA -->
+        <section class="section_newsletter border_newsletter"  id="locadora">
+            <div class="container_text">
+                <h3>Movie Booster</h3>
+                <p>Sua nova locadora favorita, com o charme dos tempos clássicos e a tecnologia dos dias atuais. Inspirada na era de ouro das videolocadoras, oferecemos uma curadoria especial de filmes que marcaram gerações, além dos lançamentos mais aguardados. Aqui, você encontra não só filmes, mas memórias. Reative o hábito de escolher o que assistir com calma — e com estilo..</p>
+                <h3>Volte no tempo com a Movie Booster! </h3>
+                <p>A locadora onde os clássicos vivem, os lançamentos brilham e a nostalgia é garantida. Vem reviver essa experiência com a gente! </p>
+                <p>Rebobinando Memórias. Recarregando Emoções.</p>
+            </div>
+        </section>
+        
+        <!-- CONTATOS -->
+        <section class="section_contatos"  id="contatos">
+            <h2>Contatos</h2>
+            <iframe class="google_maps" id="contatos"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d876.9248899785563!2d-52.81970437079146!3d-28.45847179890542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fd493b24699437%3A0xdb26ce86faa682a9!2sAv.%20Dr.%20Waldomiro%20Graeff%2C%201233%20-%20Centro%2C%20N%C3%A3o-Me-Toque%20-%20RS%2C%2099470-000%2C%20Brasil!5e0!3m2!1spt-PT!2spt!4v1680682208842!5m2!1spt-PT!2spt"
+                width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <address class="contatos_address">Av. Dr. Waldomiro Graeff, 1233<br>
+                Tel.: +351 21 123 456<br>
+                E-mail: contato@moviebooster.com</address>
+        </section> <!-- contatos -->
+    
+    </main> <!-- container -->
+
+    <footer>
+        <p>&copy; 2025 MVP - PUC Rio Hélio Tadeu Baccini.</p>
+    </footer>
+
+<!-- MODAL DE ERRO -->
+<div id="modal-erro" class="modal">
+  <div class="modal-conteudo">
+    <span class="fechar" onclick="fecharModal()">&times;</span>
+    <p id="mensagem-erro-modal"></p>
+    <div class="botoes-modal">
+      <button onclick="fecharModal()">Ok</button>
+    </div> <!-- botoes-modal -->
+  </div> <!-- modal-conteudo -->
+</div> <!-- modal-erro -->
+
+</body>
+</html>

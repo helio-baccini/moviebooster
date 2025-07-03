@@ -1,0 +1,532 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    line-height: 1.5;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    font-size: 1.4rem;
+}
+
+h1, h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Menu */
+.logo {
+    width: 70px;
+    height: 100%;
+}
+
+.header_container{
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    padding: 1rem;
+    background-color: #162028;
+}
+
+.header_nav ul{
+    margin: 0;
+}
+
+.header_nav li {
+    font-size: 1.5rem;
+    text-decoration: none;
+    display: inline;
+    margin-right: 20px;
+}
+
+.header_nav a {
+    color: #ccc;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.header_nav a:hover {
+    color: #FED001;
+}
+
+/* Seção Container Outdoor */
+.container_header{
+    margin: 0 auto;
+    background-image: url("imagens/header.webp");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    min-height: 40em;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.container_header h1 {
+    color: white;
+    margin-left: 3em;
+    padding-top: 1rem;
+    font-size: 3.5em;
+}
+
+.container_header p{
+    width: 30em;
+    color: white;
+    margin-left: 3em;
+    font-size: 1.5em;
+}
+
+/* Seção Carts dos Filmes */
+.carts_section{
+    display: flex;
+    flex-wrap: wrap;     
+    justify-content: center; 
+    gap: 20px;           
+    margin: 1rem auto;
+}
+
+.cart_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1.8rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 20em; 
+}
+
+.cart_card img{ 
+    width: 100%;              
+    height: 30em;            
+    object-fit: cover;        
+    border-radius: 1.8rem 1.8rem 0 0;
+}
+
+.cart_card_content {
+    padding: 1rem;
+}
+
+/* Tabela / Cadastro / Banco de dados */
+/* Seção geral da tabela */
+.border_newsletter{box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.4);}
+
+/* Seção Tabela */
+/* Reserva de Filmes */
+
+section.tabela_section {
+  padding: 2rem 3rem;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1rem 1rem 0 0;
+  max-width: 1920px;
+}
+
+/* Campo de busca */
+.input-unificado {
+  padding: 1rem;
+  border: 0.1rem solid #ccc;
+  border-radius: .8rem;
+  min-width: 150px;
+  flex: 1 1 150px;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+}
+
+form input,
+form select,
+form button {
+  flex: 1 1 200px;
+  padding: 1rem;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.8rem;
+  box-sizing: border-box;
+}
+
+/* Botão Salvar */
+form button {
+  background-color: #ffd000;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 1rem;
+  width: auto;
+  min-width: 100px;
+  border-radius: 0.8rem;
+}
+
+form button:focus {
+  outline: none;
+}
+
+form button:hover {
+  background-color: #e0b800;
+}
+
+/* Container da tabela */
+.tabela_section {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* Container da tabela */
+.tabela-responsiva {
+  width: 100%;
+  overflow-x: auto;
+  background-color: #fff;
+  border-radius: 0.8rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+}
+
+/* Tabela em si */
+.tabela-responsiva table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+/* Cabeçalho */
+table thead {
+  background-color: #eeeeee;
+}
+
+/* Cabeçalhos e células */
+table th,
+table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Inputs e selects dentro da tabela */
+table input,
+table select {
+  width: 100%;
+  padding: 0.6rem;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+/* Grupo de botões */
+.grupo-botoes {
+  display: flex;
+  gap: 1.4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Botões de ação */
+td button {
+  border: none;
+  border-radius: 1.4rem;
+  padding: 0.8rem 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button.editar {
+  background-color: rgba(160, 216, 240, 0.3);
+}
+
+button.editar:hover {
+  background-color: rgba(160, 216, 240, 0.9);
+}
+
+button.excluir {
+  background-color: rgba(238, 159, 150, 0.3);
+}
+
+button.excluir:hover {
+  background-color: rgba(238, 159, 150, 0.9);
+}
+
+button.excluir img,
+button.editar img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Seção Noticias e sobre a Locadora*/
+.section_newsletter{
+    position: relative;
+    background-image: linear-gradient(to right, rgba(0,0,255, 0.9), rgba(0, 0, 255, 0.1)), url("imagens/newsletter.webp");
+    background-size: 100% 100%;
+    background-position: center;
+    height: 70rem; 
+    color: white;
+    padding: 3rem;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.container_text {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 2rem;
+    width: 60rem;
+    height: 65%;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 3rem 2rem 2rem 3rem;
+    border-radius: 1rem;
+    margin-right: 0.9rem;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.8); 
+    line-height: 1.6;
+}
+
+.container_text h3 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: rgb(236, 158, 158);
+    text-shadow: 0 10px 10px rgba(0, 0, 0, 0.9);
+    line-height: 1.6;
+}
+
+.container_text p {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Seção Contatos */
+.section_contatos{  
+    background-color: rgb(249, 249, 249);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+.section_contatos h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.google_maps{
+    width: 100%;
+    height: 40rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+address{
+    font-style: normal;
+    text-align: center;
+    margin-top: 1.2rem;
+    font-size: 1rem;
+    color: #3a3939;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #162028;
+    color: white;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+/* Modal de erro */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-conteudo {
+  background-color: #2f2f2f;
+  color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+.modal-conteudo .fechar {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.botoes-modal {
+  margin-top: 20px;
+}
+
+.botoes-modal button {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #444;
+  color: white;
+  cursor: pointer;
+}
+/* -------------------------------------------- */
+/* TRECHO PAGINA RESPONSIVA PARA TELAS MENORES */
+@media (max-width: 768px) {
+  html {
+    font-size: 55%; /* reduz levemente a escala */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  body {
+    width: 95vw;
+  }
+
+  /* Seção Container Outdoor */
+  .header_container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header_nav li {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  .container_header {
+    height: auto;
+    background-size: cover;
+    padding-bottom: 2rem;
+  }
+
+  .container_header h1,
+  .container_header p {
+    margin-left: 1.5rem;
+    padding: 0.5rem;
+    width: auto;
+    font-size: 2.5rem;
+  }
+
+/* Seção Carts dos Filmes */  
+  .carts_section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cart_card {
+    width: 90%;
+  }
+
+/* Tabela / Cadastro / Banco de dados */
+/* Seção geral da tabela / Lista */ 
+  form {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  form input,
+  form select,
+  form button {
+    width: 100%;
+    flex: 1 1 auto;
+  }
+
+  .grupo-botoes {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .tabela-responsiva {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+  .tabela-responsiva table {
+    display: block;
+    overflow-x:scroll
+  }
+
+  .tabela-responsiva th,
+  .tabela-responsiva td {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+
+  .container_text {
+    width: 90%;
+    left: 5%;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .container_text h3 {
+    font-size: 1.8rem;
+  }
+
+  .container_text p {
+    font-size: 1.4rem;
+  }
+
+  /* Seção Contatos */
+  .section_contatos {
+    padding: 1rem;
+  }
+
+  .google_maps {
+    height: 25rem;
+  }
+
+  .modal-conteudo {
+    width: 90%;
+  }
+}
+
+/* Tabelas */
+@media (max-width: 768px) {
+  .tabela-responsiva {
+  overflow-y: auto;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  padding-right: 1rem; /* novo */
+  -webkit-overflow-scrolling: touch;
+}
+
+  .tabela-responsiva table {
+    min-width: 300px;
+    display: block;
+}
+}

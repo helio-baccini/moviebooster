@@ -1,0 +1,148 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Locadora de Filmes API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/registros": {
+      "get": {
+        "summary": "Listar todos os registros",
+        "tags": ["Registros"],
+        "responses": {
+          "200": {
+            "description": "Lista de registros",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListaRegistros"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar um novo registro",
+        "tags": ["Registros"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistroIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Registro criado",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistroOut"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/registros/{registro_id}": {
+      "put": {
+        "summary": "Atualizar um registro",
+        "tags": ["Registros"],
+        "parameters": [
+          {
+            "name": "registro_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistroIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Registro atualizado com sucesso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistroOut"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Registro não encontrado"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Excluir um registro",
+        "tags": ["Registros"],
+        "parameters": [
+          {
+            "name": "registro_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Registro excluído com sucesso"
+          },
+          "404": {
+            "description": "Registro não encontrado"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "RegistroIn": {
+        "type": "object",
+        "properties": {
+          "nome": { "type": "string" },
+          "titulo": { "type": "string" },
+          "data_lancamento": { "type": "integer" },
+          "description": { "type": "string" }
+        },
+        "required": ["nome", "titulo", "data_lancamento", "description"]
+      },
+      "RegistroOut": {
+        "allOf": [
+          { "$ref": "#/components/schemas/RegistroIn" },
+          {
+            "type": "object",
+            "properties": {
+              "registro_id": { "type": "string" }
+            },
+            "required": ["registro_id"]
+          }
+        ]
+      },
+      "ListaRegistros": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/RegistroOut"
+        }
+      }
+    }
+  }
+}
