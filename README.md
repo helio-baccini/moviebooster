@@ -62,7 +62,4 @@ API desenvolvido como projeto final Sprint: Desenvolvimento Full Stack Básico
 ---
 
 ## Video sobre o projeto
-Link: 
-
-## Link do projeto no ar
-Link
+Link:
