@@ -35,7 +35,7 @@ O arquivo `script.js` realiza chamadas à API backend (Flask) por meio de `fetch
 
 ---
 
-## ▶️ Como Executar
+## Como Executar
 
 1. Garanta que o backend Flask esteja rodando, abra o arquivo iniciar_projeto.bat
 2. O arquivo `index.html` irá abrir automaticamente, caso não abrir, precisará abrir manualmente clicando 2x no arquivo ou pelo navegador.
