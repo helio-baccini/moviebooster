@@ -44,19 +44,26 @@ API desenvolvido como projeto final Sprint: Desenvolvimento Full Stack Básico
 ###  Etapa 1: Back-end (API Flask)
 
 1. **Clone ou descompacte o projeto**
+
 2. Abra um terminal na pasta raiz do projeto (`MovieBooster`).
+
 3. Crie e ative o ambiente virtual (opcional, mas recomendado).
-   Abra o arquivo **inicio_projeto.bat**, ele criar um ambiente virtual temporário no windows e abrirar automaticamente a pagina index.html.
-   Caso ocorra erro do Windows Defener SmartScrim é porque o arquivo não é assinado por uma fonte reconhecida.
+
+3.1 Alternativa: você pode abrir o arquivo **inicio_projeto.bat**, ele criará um ambiente virtual temporário no windows e abrirá automaticamente a pagina index.html.
+
+3.2 Caso ocorra erro do Windows Defener SmartScrim é porque o arquivo não é assinado por uma fonte reconhecida.
       Para continuar com segurança:
          - Clique em Mais informações (embaixo da mensagem).
          - Em seguida, clique no botão Executar assim mesmo.
-4. Caso o index.html não abrir automaticamente, entre no  arquivo frontend e abra a pagina index.html
+
+4. Caso o index.html não abrir automaticamente, entre no  arquivo frontend e abra a pagina index.html.
+
 5. O programa ira funcionar normalmente
 
 ###  Etapa 2: Front-end (HTML, CSS, JS)
 
 1. Abra na pasta frontend
+
 2. Abra o arquivo index.html 
 
 ---
