@@ -60,7 +60,9 @@ Lá você verá a interface do Swagger com todos os endpoints da API.
 
 ## GET
 1 - Na homepage, abre a aba **GET** em azul
+
 2 - Clique em Try it out
+
 3 - Clique em execute
 -- No Response Body terá os registros cadastrados
    **Data lançamento**
@@ -71,7 +73,9 @@ Lá você verá a interface do Swagger com todos os endpoints da API.
 
 ## POST
 1 - Na homepage, abre a aba **POST** em verde
+
 2 - Clique em Try it out
+
 3 - Clique em execute
 -- No Response Body poderá cadastrar reservas
    **Data lançamento**     Ano do lançamento do filme
@@ -81,15 +85,22 @@ Lá você verá a interface do Swagger com todos os endpoints da API.
 
 ## DELETE
 1 - Na homepage, abre a aba **DELETE** em vermelho
+
 2 - Clique em Try it out
+
 3 - Copie o registro_id conforme descrito na aba GET
+
 4 - Clique em execute, o registro será deletado e ao atualizar a pagina index a reserva não aparecerá
 
 ## PUT
 1 - Na homepage, abre a aba **PUT** em laranja
+
 2 - Clique em Try it out
+
 3 - Copie o registro_id conforme descrito na aba GET
+
 4 -No campo Edite Value poderá fazer a alteração
+
 5 Clique em execute e o registro será alterado
 ---
 
